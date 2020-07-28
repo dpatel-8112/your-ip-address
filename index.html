@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IP Address Finder</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<table>
+			<caption>
+				<img src="logo-final.png" alt="amazing">
+			</caption>
+			<thead>
+				<tr>
+					<th colspan="4" id="heading">Find Your IP Address</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="" rowspan="" headers=""><br></td>
+				</tr>
+				<tr>
+					<td colspan="4" id="ip-address">
+						<button type="submit"></button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><input type="text" name="ip-address" id="ip-address1"></td>
+				</tr>
+				<tr>
+					<td colspan="4" id="copy-parent"><input type="button" name="copy" value="Copy" id="copy" onclick="myFunction()"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<script type="application/javascript">
+  function getIP(json) {
+    document.getElementById('ip-address1').value =  json.ip;
+    document.getElementById('ip-address').innerHTML =  json.ip;
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+	<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
